@@ -21,8 +21,8 @@ for i = 1:length(ids)
 end
 [s, idxs] = sort(counts);
 
-% Take speakers with around 14-22 files
-assert(s(743) == 14 && s(752) == 22);
+% Take speakers with around 12-24 files
+assert(s(743) == 12 && s(752) == 24);
 idxs = idxs(743:752);
 ids = ids(idxs);
 rows = ismember(dataTable.client_id,ids);
@@ -205,5 +205,3 @@ end
 figure(Units="normalized",Position=[0.4 0.4 0.4 0.4])
 confusionchart(adsTest.Labels,r2,title="Test Accuracy (Per File)", ...
     ColumnSummary="column-normalized",RowSummary="row-normalized");
-
-% Reference:Mathworks Documentation:Speaker Identification Using Pitch and MFCC.https://au.mathworks.com/help/audio/ug/speaker-identification-using-pitch-and-mfcc.html
