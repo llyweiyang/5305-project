@@ -22,8 +22,8 @@ end
 [s, idxs] = sort(counts);
 
 % Take speakers with around 12-24 files
-assert(s(743) == 12 && s(752) == 24);
-idxs = idxs(743:752);
+assert(s(734) == 11 && s(754) == 28);
+idxs = idxs(734:754);
 ids = ids(idxs);
 rows = ismember(dataTable.client_id,ids);
 
